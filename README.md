@@ -8,14 +8,14 @@ a test repo for testing random things
 
 
 ```bash
-hugo new site org-<your-org-name>
-cd org-<your-org-name>
+hugo new site org-{your-org-name}
+cd org-{your-org-name}
 ```
 
 2. Initialise your new site as a hugo module, as only modules can import modules:
 
 ```zsh
-hugo mod init github.com/CodeYourFuture/curriculum/org-<your-org-name>
+hugo mod init github.com/CodeYourFuture/curriculum/org-{your-org-name}
 ```
 
 Then add the common theme and content modules as hugo modules to hugo.toml:
@@ -23,11 +23,11 @@ Then add the common theme and content modules as hugo modules to hugo.toml:
 ```toml
 [module]
   [[module.imports]]
-    path = "github.com/CodeYourFuture/curriculum/common-theme"
+    path = \"github.com/CodeYourFuture/curriculum/common-theme\"
   [[module.imports]]
-    path = "github.com/CodeYourFuture/curriculum/common-content"
+    path = 'github.com/CodeYourFuture/curriculum/common-content'
     [[module.imports.mounts]]
-      source = "en"
+      source = /"en/"
       target = "content"
 ``` 
 
